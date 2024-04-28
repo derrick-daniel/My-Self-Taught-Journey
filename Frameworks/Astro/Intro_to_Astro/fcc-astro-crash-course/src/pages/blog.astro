@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from '../layouts/Layout.astro';
+import H1 from '../components/H1.astro'
+import Main from '../components/Main.astro'
+import PostList from "../components/PostList.astro";
+
+const posts  = await getCollection('posts');
+console.log(posts)
+---
+
+<Layout title="Blog | I Don't Listen To Music">
+	<Main>
+		<H1 text="I Don't Listen To Music Blog" />
+        {posts.map(post => (
+            <PostList posts={posts} />
+        ))}
+	</Main>
+</Layout>
