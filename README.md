@@ -1,1 +1,1 @@
-# MySelfTaughtJourney
+# My-Self-Taught-Journey
